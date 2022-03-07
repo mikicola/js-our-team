@@ -7,7 +7,7 @@ const arrTeam = [
     {
         name: 'Wayne Barnett',
         job: 'Founder & CEO',
-        img: 'img/angela-caroll-chief-editor.jpg',
+        img: 'img/wayne-barnett-founder-ceo.jpg',
     },
     {
         name: 'Angela Caroll',
@@ -17,22 +17,22 @@ const arrTeam = [
     {
         name: 'Walter Gordon',
         job: 'Office Manager',
-        img: 'img/angela-caroll-chief-editor.jpg'
+        img: 'img/walter-gordon-office-manager.jpg'
     },
     {
         name: 'Angela Lopez',
         job: 'Social Media Manager',
-        img: 'img/angela-caroll-chief-editor.jpg'
+        img: 'img/angela-lopez-social-media-manager.jpg'
     },
     {
         name: 'Scot Estrada',
         job: 'Developer',
-        img: 'img/angela-caroll-chief-editor.jpg'
+        img: 'img/scott-estrada-developer.jpg'
     },
     {
         name: 'Barbara Ramos',
         job: 'Graphic Designer',
-        img: 'img/angela-caroll-chief-editor.jpg'
+        img: 'img/barbara-ramos-graphic-designer.jpg'
     },
 ]
 console.log(arrTeam[0].name)
@@ -40,11 +40,12 @@ console.log(arrTeam[0].name)
 //console.log(arrTeam[0]['name'])
 
 
+const teamContainer = document.querySelector('.team-container')
+
 for (let i = 0; i < arrTeam.length; i++) {
     createCard(i);
 }
 
-const teamContainer = document.querySelector('.team-container')
 function createCard(i){
     let codeCard =
     `
@@ -61,5 +62,5 @@ function createCard(i){
         </div>
     </div>
     `
+    teamContainer.innerHTML = teamContainer.innerHTML + codeCard;
 }
-teamContainer.innerHTML = teamContainer.innerHTML + codeCard;
