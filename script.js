@@ -40,22 +40,26 @@ console.log(arrTeam[0].name)
 //console.log(arrTeam[0]['name'])
 
 
+for (let i = 0; i < arrTeam.length; i++) {
+    createCard(i);
+}
+
 const teamContainer = document.querySelector('.team-container')
-function createCard(){
+function createCard(i){
     let codeCard =
     `
     <div class="team-card">
         <div class="card-image">
             <img
-            src=${img}
-            alt=${name}
+            src="${arrTeam[i]['img']}"
+            alt="${arrTeam[i]['name']}"
             />
         </div>
         <div class="card-text">
-            <h3>${name}</h3>
-            <p>${job}</p>
+            <h3>${arrTeam[i]['name']}</h3>
+            <p>${arrTeam[i]['job']}</p>
         </div>
     </div>
     `
-    teamContainer.innerHTML = teamContainer.innerHTML + codeCard;
 }
+teamContainer.innerHTML = teamContainer.innerHTML + codeCard;
